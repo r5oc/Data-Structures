@@ -4,6 +4,6 @@
 
 ### Estruturas implementadas
 
-- **Vetor**: <strong>`src/vector`</strong>
+- **Vetor** <strong>`src/vector`</strong>
 
 - **Lista** <strong> `src/list`</strong>
