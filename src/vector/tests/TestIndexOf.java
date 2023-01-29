@@ -8,7 +8,6 @@ public class TestIndexOf {
         vector.autoFill();
         System.out.println(vector);
         System.out.println(vector.indexOf("item 1"));
-    
         System.out.println(vector.indexOf("item 10"));
     }
 }
