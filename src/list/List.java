@@ -10,6 +10,7 @@ public class List<T> {
         this.elements = (T[]) new Object[maxItems];
     }
 
+
     public boolean contains(Object item){
         for (int i = 0; i < this.elements.length; i++){
             if (elements[i].equals(item)){
@@ -20,7 +21,7 @@ public class List<T> {
     }
 
     public void maxItemsValidation(int maxItems){
-        if (maxItems == 0){
+        if (maxItems <= 0){
             maxItems = 1;
         }
     }
