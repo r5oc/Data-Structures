@@ -5,9 +5,9 @@ public class List<T> {
     private int size = 0;
     private Object[] elements;
 
-    public List(int maxItems){
-        maxItemsValidation(maxItems);
-        this.elements = (T[]) new Object[maxItems];
+    public List(int capacity){
+        maxItemsValidation(capacity);
+        this.elements = (T[]) new Object[capacity];
     }
 
     public boolean contains(Object item){
@@ -19,9 +19,9 @@ public class List<T> {
         return false;
     }
 
-    public void maxItemsValidation(int maxItems){
-        if (maxItems == 0){
-            maxItems = 1;
+    public void maxItemsValidation(int capacity){
+        if (capacity < 0){
+            throw new IllegalArgumentException("Illegal Capacity: " + capacity);
         }
     }
 
