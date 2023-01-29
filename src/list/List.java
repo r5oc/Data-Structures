@@ -20,9 +20,15 @@ public class List<T> {
         return false;
     }
 
+<<<<<<< HEAD
     public void maxItemsValidation(int capacity){
         if (capacity < 0){
             throw new IllegalArgumentException("Illegal Capacity: " + capacity);
+=======
+    public void maxItemsValidation(int maxItems){
+        if (maxItems <= 0){
+            maxItems = 1;
+>>>>>>> 8e85e19a467802560350b3f79e4ea4bd59773f1b
         }
     }
 
