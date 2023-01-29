@@ -17,7 +17,7 @@ public class Vector {
         }
     }
     public void clear(){
-        String[] newElements = new String[this.maxItems];   
+        String[] newElements = new String[this.maxItems];
         this.elements = newElements;
         this.size = 0;
     }
@@ -32,7 +32,7 @@ public class Vector {
         }
         throw new IllegalArgumentException("search [Invalid index]");
     }
-    
+
     public int search(String item){
         for (int i = 0; i < this.size; i++){
             if (elements[i].equals(item)){
@@ -51,7 +51,7 @@ public class Vector {
             if (elements[i].equals(item)){
                 return i;
             }
-        }    
+        }
         return -1;
     }
 
