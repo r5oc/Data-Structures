@@ -4,6 +4,5 @@
 
 ### Estruturas implementadas
 
-- **Vetor** <strong>`src/vector`</strong>
-
-- **Lista** <strong>`src/list`</strong>
+- [Vetor](https://github.com/r5oc/Data-Structures/tree/master/src/vector)
+- [Lista](https://github.com/r5oc/Data-Structures/tree/master/src/list)
