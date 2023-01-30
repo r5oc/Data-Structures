@@ -7,5 +7,3 @@
 - **Vetor** <strong>`src/vector`</strong>
 
 - **Lista** <strong>`src/list`</strong>
-
-- **Lista** <strong> `src/list`</strong>
