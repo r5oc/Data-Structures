@@ -19,10 +19,12 @@ public class List<T> {
         }
         return false;
     }
-    
+
     public void maxItemsValidation(int capacity){
         if (capacity < 0){
             throw new IllegalArgumentException("Illegal Capacity: " + capacity);
+        }
+    }
 
     public void expand(){
         if (this.size == this.elements.length){
