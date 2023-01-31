@@ -3,7 +3,7 @@ package list;
 
 public class List<T> {
     private int size = 0;
-    private Object[] elements;
+    private T[] elements;
 
     public List(int capacity){
         maxItemsValidation(capacity);
@@ -11,7 +11,7 @@ public class List<T> {
     }
 
 
-    public boolean contains(Object item){
+    public boolean contains(T item){
         for (int i = 0; i < this.elements.length; i++){
             if (elements[i].equals(item)){
                 return true;
@@ -26,7 +26,7 @@ public class List<T> {
         }
     }
 
-    public void expand(){
+    private void expand(){
         if (this.size == this.elements.length){
             T[] newElements = (T[]) new Object[((this.elements.length * 3) / 2) + 1];
 
@@ -37,7 +37,7 @@ public class List<T> {
         }
     }
 
-    public void replace(int index, Object item){
+    public void replace(int index, T item){
         if (index >= 0 && index < this.size){
             elements[index] = item;
         }
@@ -70,11 +70,11 @@ public class List<T> {
         return -1;
     }
 
-    public void remove(Object item){
+    public void remove(T item){
         remove(indexOf(item));
     }
 
-    public int indexOf(Object item){
+    public int indexOf(T item){
         for (int i = 0; i < this.size; i++){
             if (elements[i].equals(item)){
                 return i;
@@ -95,7 +95,7 @@ public class List<T> {
         size--;
     }
 
-    public void add(int index, Object item){
+    public void add(int index, T item){
         if (!(index >= 0 && index < this.size)){
             throw new IllegalArgumentException("[Invalid position]");
         }
@@ -109,18 +109,11 @@ public class List<T> {
         this.size++;
     }
 
-    public void add(Object item){
+    public void add(T item){
         this.expand();
         if (this.size < this.elements.length){
             elements[this.size] = item;
             size++;
-        }
-    }
-
-    public void autoFill(){
-        int emptySpaces = this.elements.length - this.size;
-        for (int i = 1; i < emptySpaces+1; i++){
-            add(i);
         }
     }
 
