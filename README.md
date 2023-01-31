@@ -6,3 +6,4 @@
 
 - [Vetor](https://github.com/r5oc/Data-Structures/tree/master/src/vector)
 - [Lista](https://github.com/r5oc/Data-Structures/tree/master/src/list)
+- [Pilha](https://github.com/r5oc/Data-Structures/tree/master/src/stack)

@@ -6,6 +6,15 @@ public class Stack<T> {
     private T[] elements;
     private int size = 0;
 
+    public int search(T item){
+        for (int i = 0; i < this.size; i++){
+            if (elements[i].equals(item)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public Stack(int capacity) {
         if (capacity < 0){
             throw new NegativeArraySizeException();
@@ -29,6 +38,10 @@ public class Stack<T> {
         this.size++;
     }
 
+    public int getLength(){
+        return this.elements.length;
+    }
+
     public int getSize(){
         return this.size;
     }
@@ -45,6 +58,4 @@ public class Stack<T> {
     public String toString() {
         return "Stack [elements=" + Arrays.toString(elements) + ", size=" + size + "]";
     }
-
-
 }

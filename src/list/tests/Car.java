@@ -17,6 +17,7 @@ public class Car {
         result = prime * result + year;
         return result;
     }
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
