@@ -2,6 +2,7 @@ package stack;
 
 import java.util.Arrays;
 
+
 public class Stack<T> {
     private T[] elements;
     private int size = 0;
@@ -56,6 +57,14 @@ public class Stack<T> {
 
     @Override
     public String toString() {
-        return "Stack [elements=" + Arrays.toString(elements) + ", size=" + size + "]";
+
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int i = 0; ; i++) {
+            sb.append(String.valueOf(elements[i]));
+            if (i == this.elements.length-1)
+                return sb.append(']').toString();
+            sb.append(", ");
+        }
     }
 }
