@@ -7,6 +7,48 @@ public class LinkedList<T> {
     private int size = 0;
 
 
+    public T remove(int index) {
+        indexIsValid(index);
+
+        Node<T> current = start;
+        Node<T> previous = null;
+        for (int i = 0; i < index; i++) {
+            previous = current;
+            current = current.getNext();
+        }
+
+        if (previous == null) { // removing the head node
+            start = start.getNext();
+        } else {
+            previous.setNext(current.getNext());
+        }
+        size--;
+        return current.getItem();
+    }
+
+    public T get(int index){
+        return getNode(index).getItem();
+    }
+
+    private Node<T> getNode(int index){
+        this.indexIsValid(index);
+        Node<T> nodeAux = this.start;
+        Node<T> returnNode = null;
+
+        for (int i = 0; i <= index; i++){
+            returnNode = nodeAux;
+            nodeAux = nodeAux.getNext();
+        }
+        return returnNode;
+    }
+
+    public void indexIsValid(int index){
+        if (index >= this.size || index < 0){
+            int lastIndex = this.size-1;
+            throw  new IndexOutOfBoundsException("Index :" + index + " is not valid");
+        }
+    }
+
     public void clear(){
         for (Node<T> current = this.start; current != null;){
             Node<T> next = current.getNext();
@@ -43,12 +85,17 @@ public class LinkedList<T> {
         Node<T> current = this.start;
 
         for (int i = 0; i < this.size - 1; i++){
-            sb.append(current.getItem()).append(", ");
+            sb.append(current.getItem()).append(" --> ");
             current = current.getNext();
         }
-        sb.append(current.getItem()).append("]");
+        try {
+            sb.append(current.getItem());
+        }
+        catch   (NullPointerException e){
+            sb.delete(sb.lastIndexOf(" --> "), sb.length()-1);
+        }
+        sb.append("]");
 
-        return "LinkedList: " + sb.toString();
+        return "LinkedList: " + sb;
     }
-
 }

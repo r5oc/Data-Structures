@@ -4,14 +4,27 @@ import linked.list.LinkedList;
 
 public class TestLinkedList {
     public static void main(String[] args) {
-        LinkedList<Integer> ll = new LinkedList<>();
+        LinkedList<Object> ll = new LinkedList<>();
 
-        ll.add(1);
-        ll.add(2);
-        ll.add(3);
-        System.out.println("size: " + ll.getSize() + " " + ll);
+        for (int i = 1; i < 5; i++) {
+            ll.add(i);
+        }
 
+        for (int i = 0; i < ll.getSize(); i++) {
+            System.out.print(ll.get(i) + " ");
+        }
+        System.out.println("\n");
+        System.out.println(ll + " [size: " + ll.getSize() + "]\n");
+
+        ll.remove(3);
+        System.out.println(ll + " [size: " + ll.getSize() + "]\n");
+
+        ll.remove(0);
+        System.out.println(ll + " [size: " + ll.getSize() + "]\n");
+
+        
         ll.clear();
-        System.out.println("\nsize: " + ll.getSize() + " " + ll);
+        System.out.println(ll + " [size: " + ll.getSize() + "]\n");
+        
     }
 }

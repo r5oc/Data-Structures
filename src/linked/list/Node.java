@@ -14,7 +14,11 @@ public class Node<T> {
         this.item = item;
         this.next = next;
     }
-
+    
+    public Object getType(){
+        return this.item.getClass();
+    }
+    
     public T getItem() {
         return item;
     }
@@ -29,12 +33,5 @@ public class Node<T> {
 
     public void setNext(Node<T> next) {
         this.next = next;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[").append(item).append(" ").append(next).append("]");
-        return sb.toString();
     }
 }
