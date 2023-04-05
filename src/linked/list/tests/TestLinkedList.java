@@ -22,9 +22,8 @@ public class TestLinkedList {
         ll.remove(0);
         System.out.println(ll + " [size: " + ll.getSize() + "]\n");
 
-        
         ll.clear();
         System.out.println(ll + " [size: " + ll.getSize() + "]\n");
-        
+
     }
 }

@@ -10,10 +10,9 @@ public class List<T> {
         this.elements = (T[]) new Object[capacity];
     }
 
-
     public boolean contains(T item){
         for (int i = 0; i < this.elements.length; i++){
-            if (elements[i].equals(item)){
+            if ( (T) this.elements[i] == item){
                 return true;
             }
         }
@@ -24,6 +23,7 @@ public class List<T> {
         if (capacity < 0){
             throw new IllegalArgumentException("Illegal Capacity: " + capacity);
         }
+        this.size = capacity;
     }
 
     private void expand(){
@@ -76,7 +76,7 @@ public class List<T> {
 
     public int indexOf(T item){
         for (int i = 0; i < this.size; i++){
-            if (elements[i].equals(item)){
+            if ((T) elements[i] == item){
                 return i;
             }
         }
