@@ -10,3 +10,4 @@
 - [Fila](https://github.com/r5oc/Data-Structures/tree/master/src/queue)
 - [Lista Encadeada](https://github.com/r5oc/Data-Structures/tree/master/src/linked/list)
 - [Lista Encadeada Circular](https://github.com/r5oc/Data-Structures/tree/master/src/circular/linked/list)
+- [Árvore Binária](https://github.com/r5oc/Data-Structures/tree/master/src/binary.tree)
